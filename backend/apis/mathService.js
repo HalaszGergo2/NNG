@@ -36,3 +36,8 @@ async function multiplyMatrices(a, b) {
 
   return result;
 }
+
+module.exports = {
+    getFibonacci,
+    multiplyMatrices
+}
