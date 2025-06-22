@@ -15,6 +15,24 @@ async function getFibonacci(number) {
   return b;
 }
 
-async function multiplyMatrices(a, b){
+async function multiplyMatrices(a, b) {
+  if (!Array.isArray(a) || !Array.isArray(b)) {
+    return "Mindkettő bemenetnek 2D mátrix tömbnek kell lennie.";
+  }
 
+  const rowsA = a.length;
+  const colA = a[0].length;
+  const rowsB = b.length;
+  const colB = b[0].length;
+  const result = Array.from({ length: rowsA }, () => Array(colB).fill(0));
+
+  for (let i = 0; i < rowsA; i++) {
+    for (let j = 0; j < colB; j++) {
+      for (let k = 0; k < colA; k++) {
+        result[i][j] += a[i][k] * b[k][j];
+      }
+    }
+  }
+
+  return result;
 }
