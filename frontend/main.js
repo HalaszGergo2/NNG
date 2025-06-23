@@ -32,3 +32,7 @@ function toggleTheme(){
     }
 }
 
+function toggleAlign(){
+    const buttons = document.getElementById('buttons')
+    buttons.classList.toggle('align-end')
+}
