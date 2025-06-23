@@ -1,4 +1,3 @@
-
 async function runApi() {
     const input = document.getElementById('input').value;
     const output = document.getElementById('result');
@@ -40,8 +39,7 @@ function apiToggle(){
      ]
 
      textarea.value = JSON.stringify(template)
-
-     
+  
 }
 
 function toggleTheme(){
