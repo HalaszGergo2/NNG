@@ -1,3 +1,4 @@
+
 async function runApi() {
     const input = document.getElementById('input').value;
     const output = document.getElementById('result');
@@ -17,6 +18,30 @@ async function runApi() {
     } catch (error) {
         output.textContent = "HIBA, " + error
     }
+}
+
+function apiToggle(){
+     const select = document.getElementById('apiSelect');
+     const selected = select.value;
+     const textarea = document.getElementById('input');
+
+    /* if(selected === "Select an API"){
+        textarea.value = "";
+     } */
+
+     const [api, method] = selected.split(".");
+    
+     const template = [
+        {
+            api,
+            method,
+            params: []
+        }
+     ]
+
+     textarea.value = JSON.stringify(template)
+
+     
 }
 
 function toggleTheme(){
