@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Halász Gergő" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <title>JSON API Runner</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>JSON API Runner</h1>
+      </header>
+
+      <article>
+        <div id="dropdown">
+          <label for="apiSelect">API selection</label>
+          <select id="apiSelect">
+            <option value="">Select an API</option>
+            <option value="mathService.getFibonacci">
+              mathService.getFibonacci
+            </option>
+            <option value="mathService.multiplyMatrices">
+              mathService.multiplyMatrices
+            </option>
+            <option value="userService.getUserProfile">
+              userService.getUserProfile
+            </option>
+            <option value="imageService.getImageByName">
+              imageService.getImageByName
+            </option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <textarea id="input" cols="50" rows="20"> </textarea>
+          </div>
+          <div class="col-lg-4">
+            <h4>Example inputs:</h4>
+            <ul>
+              <li>
+                { <br />
+                "service": "mathService", <br />
+                "method": "getFibonacci", <br />
+                "params": [8] <br />
+                }
+              </li>
+              <li>
+                { <br />
+                "service": "userService", <br />
+                "method": "getUserProfile", <br />
+                "params": [10] <br />
+                }
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="buttons">
+          <button onclick="runApi()">Run</button>
+          <button onclick="toggleTheme()">Toggle theme</button>
+          <button onclick="toggleAlign()">Toggle alignment</button>
+        </div>
+        <pre id="result">
+        Result:    
+      </pre
+        >
+        <script src="main.js"></script>
+      </article>
+    </main>
+  </body>
+</html>
