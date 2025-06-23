@@ -5,9 +5,13 @@ body {
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  background-color: #f8f9fa;
   font-family: sans-serif;
+}
 
+
+textarea{
+    border-radius: 25px;
+    padding: 10px;
 }
 
 header{
@@ -24,3 +28,18 @@ header{
     display: flex;
     justify-content: flex-start;
 }
+
+.butn{
+    border-radius: 25px;
+}
+
+.light{
+    color: black;
+    background-color: rgb(236, 232, 207);
+}
+
+.dark{
+    color: white;
+    background-color: rgb(56, 55, 55) !important;
+}
+

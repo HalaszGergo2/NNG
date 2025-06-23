@@ -12,7 +12,7 @@
     />
     <title>JSON API Runner</title>
   </head>
-  <body>
+  <body class="light">
     <main>
       <header>
         <h1>JSON API Runner</h1>
@@ -21,7 +21,7 @@
       <article>
         <div id="dropdown">
           <label for="apiSelect">API selection</label>
-          <select id="apiSelect">
+          <select class="light" id="apiSelect">
             <option value="">Select an API</option>
             <option value="mathService.getFibonacci">
               mathService.getFibonacci
@@ -39,7 +39,7 @@
         </div>
         <div class="row">
           <div class="col-lg-8">
-            <textarea id="input" cols="50" rows="20"> </textarea>
+            <textarea class="light" id="input" cols="50" rows="20"> </textarea>
           </div>
           <div class="col-lg-4">
             <h4>Example inputs:</h4>
@@ -52,16 +52,23 @@
                 }]
               </li>
               <li>
-                [ { <br> "api": "userService", <br> "method": "getUserProfile", <br> "params":
-                [20] <br> } ]
+                [ { <br />
+                "api": "userService", <br />
+                "method": "getUserProfile", <br />
+                "params": [20] <br />
+                } ]
+              </li>
+              <li>
+                [ { "api": "mathService", <br> "method": "multiplyMatrices", <br>
+                "params": [ [ [1, 2], [3, 4] ], <br> [ [5, 6], [7, 8] ] ] } ]
               </li>
             </ul>
           </div>
         </div>
         <div id="buttons">
-          <button onclick="runApi()">Run</button>
-          <button onclick="toggleTheme()">Toggle theme</button>
-          <button onclick="toggleAlign()">Toggle alignment</button>
+          <button class="light butn" onclick="runApi()">Run</button>
+          <button class="light butn" onclick="toggleTheme()">Toggle theme</button>
+          <button class="light butn" onclick="toggleAlign()">Toggle alignment</button>
         </div>
         <pre id="result">
         Result:    
